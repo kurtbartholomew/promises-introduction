@@ -1,14 +1,16 @@
 $(document).ready(function(){
-  $('.callback-button').on('click', function(){
+  $('form').on('submit', function(event){
+    event.preventDefault();
+
+    var minionId = $('.minion-id')[0].value;
+    var dayOfWeek = $('.day-of-week')[0].value;
 
     $.ajax({
       method: "POST",
       url: "/minion",
       data: { 
-        name: "Steve", 
-        // boss: "The Monarch",
-        // lair: "Evil Dennys", 
-        // day: "Tuesday" 
+        minionID: minionId,
+        day: dayOfWeek 
       },
     })
       .success(function(mealPlan){

@@ -8,11 +8,11 @@ module.exports = {
     "Orange Julius Caesar" : "Fruity Fruits"
   },
 
-  findBossMealPlan: function(bossName) {
-    if (bossMealPlan[bossName]) {
-      return bossMealPlan[bossName];
+  findBossMealPlan: function(bossName, callback) {
+    if (this.bossMealPlan[bossName]) {
+      callback(null,this.bossMealPlan[bossName]);
     } else {
-      throw Error("No Provided Meal Plan");
+      callback(new Error("No Provided Meal Plan"), null);
     }
   }
 };

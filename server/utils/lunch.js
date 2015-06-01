@@ -48,11 +48,11 @@ module.exports = {
     },
   },
 
-  findMinion: function(mealPlanProvider, weekDay) {
-    if (mealPlanSchedule[mealPlanProvider][weekDay]) {
-      return mealPlanSchedule[mealPlanProvider][weekDay];
+  findMealForDay: function(mealPlanProvider, weekDay, callback) {
+    if (this.mealPlanSchedule[mealPlanProvider][weekDay]) {
+      callback(null,this.mealPlanSchedule[mealPlanProvider][weekDay]);
     } else {
-      throw Error("Meal Plan Provider not Registered");
+      callback( new Error("Meal Plan Provider not Registered"), null);
     }
   }
 };

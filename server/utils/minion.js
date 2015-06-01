@@ -9,14 +9,15 @@ module.exports = {
     "Marius" : "Chicago",
     "Darius" : "Chicago",
     "Tarius" : "Chicago",
-    "Steve" : "Evil Denniys" 
+    "Steve" : "Evil Dennys" 
   },
 
-  findLair: function(minionName) {
-    if (minionLair[minionName]) {
-      return minionLair[minionName];
+  findLair: function(minionName, callback) {
+    
+    if (this.minionLair[minionName]) {
+      callback(null,this.minionLair[minionName]);
     } else {
-      throw Error("Invalid Minion Name");
+      callback(new Error("Invalid Minion Name"),null);
     }
   }
 };

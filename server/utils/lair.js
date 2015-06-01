@@ -8,11 +8,11 @@ module.exports = {
     "Chicago" : "Orange Julius Caesar",
   },
 
-  findBoss: function(lairName) {
-    if (lairBoss[lairName]) {
-      return lairBoss[lairName];
+  findBoss: function(lairName, callback) {
+    if (this.lairBoss[lairName]) {
+      callback(null,this.lairBoss[lairName]);
     } else {
-      throw Error("Lair does not exist");
+      callback( new Error("Lair does not exist"), null);
     }
   }
 };
