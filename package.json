@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/server.spec.js",
-    "start": "node server/bin/www"
+    "start": "nodemon server/bin/www",
+    "watch-test": "./node_modules/mocha/bin/mocha test/server.spec.js --watch"
   },
   "author": [
     "Katrina Uychaco",

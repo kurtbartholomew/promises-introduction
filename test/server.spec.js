@@ -1,6 +1,6 @@
 // 'supertest' is used to simulate requests without starting a server
 var stest = require('supertest');
-
+var Promise = require('../server/lib/promise.js');
 //===============================================================
 
 // require in our current server implementation to use for our tests
@@ -52,4 +52,17 @@ describe('The server', function() {
   //     done();
   //   });
   // });
+  
+  describe('a promise', function() {
+    it('is a object', function() {
+      var promise =  new Promise();
+
+      expect(promise).to.be.a('object'); 
+    });
+    it('has a then method', function(done) {
+      var promise =  new Promise();
+
+      expect(promise).to.have.property('then');
+    });
+  });
 });
