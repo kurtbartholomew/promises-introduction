@@ -17,10 +17,11 @@
     "chai": "^2.3.0",
     "express": "^4.12.4",
     "mocha": "^2.2.5",
-    "supertest": "^1.0.1"
+    "supertest": "^1.0.1",
+    "body-parser": "~1.12.4"
   },
-  "repository": { 
-    "type" : "git",
-    "url" : "https://github.com/kurtbartholomew/promises-introduction.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kurtbartholomew/promises-introduction.git"
   }
 }
