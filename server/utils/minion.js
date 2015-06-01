@@ -1,3 +1,4 @@
+var sleep = require('sleep');
 module.exports = {
 
   minionLair: {
@@ -13,7 +14,7 @@ module.exports = {
   },
 
   findLair: function(minionName, callback) {
-    
+    sleep.sleep(1);
     if (this.minionLair[minionName]) {
       callback(null,this.minionLair[minionName]);
     } else {

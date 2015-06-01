@@ -1,3 +1,4 @@
+var sleep = require('sleep');
 module.exports = {
 
   bossMealPlan: {
@@ -9,6 +10,7 @@ module.exports = {
   },
 
   findBossMealPlan: function(bossName, callback) {
+    sleep.sleep(1);
     if (this.bossMealPlan[bossName]) {
       callback(null,this.bossMealPlan[bossName]);
     } else {

@@ -1,3 +1,4 @@
+var sleep = require('sleep');
 module.exports = {
 
   mealPlanSchedule: {
@@ -49,6 +50,7 @@ module.exports = {
   },
 
   findMealForDay: function(mealPlanProvider, weekDay, callback) {
+    sleep.sleep(1);
     if (this.mealPlanSchedule[mealPlanProvider][weekDay]) {
       callback(null,this.mealPlanSchedule[mealPlanProvider][weekDay]);
     } else {

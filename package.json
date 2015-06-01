@@ -14,12 +14,13 @@
   ],
   "license": "BSD",
   "dependencies": {
+    "bluebird": "~2.9.27",
+    "body-parser": "~1.12.4",
     "chai": "^2.3.0",
     "express": "^4.12.4",
     "mocha": "^2.2.5",
-    "supertest": "^1.0.1",
-    "body-parser": "~1.12.4",
-    "bluebird": "~2.9.27"
+    "sleep": "^2.0.0",
+    "supertest": "^1.0.1"
   },
   "repository": {
     "type": "git",

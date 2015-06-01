@@ -5,6 +5,7 @@
   <title>Evil Overlord Food Rationing</title>
   <script src="assets/js/jquery-2.1.4.min.js"></script>
   <script src="assets/js/requests.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div>
@@ -20,16 +21,14 @@
         <input type="submit" class="submit-button" value="Get Minion's Food Options">
       </form>
       </br>
-      <textarea class="minion-text-callback" id="" cols="30" rows="10"></textarea>
+      <div class="loading">
+        <img src="assets/img/loading.gif">
+      </div>
+      <div class="message">
+        <span>Today's Lunch Special Response: </span>
+        <span class="minion-text-callback"></span>
+      </div>
     </div>
-    <!-- <div>
-      <button class="bluebird-button">Get Minion Diet Info</button>
-      </br>
-      <textarea name="minion-text-bluebird" id="" cols="30" rows="10"></textarea>
-    </div> -->
-    <!-- <div>
-      <button class="q-button"></button>
-    </div> -->
   </div>
 </body>
 </html>

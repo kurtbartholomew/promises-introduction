@@ -1,3 +1,4 @@
+var sleep = require('sleep');
 module.exports = {
 
   minionRegistry: {
@@ -13,6 +14,7 @@ module.exports = {
   },
 
   findMinion: function(minionId, callback) {
+    sleep.sleep(1);
     if (this.minionRegistry[minionId]) {
       callback(null, this.minionRegistry[minionId]);
     } else {
