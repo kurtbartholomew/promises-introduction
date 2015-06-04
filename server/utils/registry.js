@@ -18,7 +18,7 @@ module.exports = {
     if (this.minionRegistry[minionId]) {
       callback(null, this.minionRegistry[minionId]);
     } else {
-      callback(new Error("Minion is unregistered. They must die!!"),null);
+      callback(new Error("You are unregistered. Report to the shark tanks!"),null);
     }
   }
 };

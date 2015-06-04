@@ -54,7 +54,7 @@ module.exports = {
     if (this.mealPlanSchedule[mealPlanProvider][weekDay]) {
       callback(null,this.mealPlanSchedule[mealPlanProvider][weekDay]);
     } else {
-      callback( new Error("Meal Plan Provider not Registered"), null);
+      callback( new Error("That's not a day of the week, you fool! Report to the shark tanks!"), null);
     }
   }
 };

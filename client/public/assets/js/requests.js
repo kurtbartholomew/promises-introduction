@@ -21,15 +21,16 @@ $(document).ready(function(){
     })
       .success(function(mealPlan){
         $('.loading').hide();
+        $('.response').text("Today's Lunch Special Response: : ");
         $('.message').show();
         $('.minion-text-callback').text(mealPlan);
       })
       .error(function(error){
         $('.loading').hide();
-
+        $('.response').text('The overlord says, \" ');
         $('.message').css({color:"red"});
-        $('.minion-text-callback').show();
-        $('.minion-text-callback').text(error.responseText);
+        $('.minion-text-callback').text(error.responseText + '\"');
+        $('.message').show();
       });
   });
 });
