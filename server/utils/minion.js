@@ -16,9 +16,10 @@ module.exports = {
   findLair: function(minionName) {
     sleep.sleep(1);
     if (this.minionLair[minionName]) {
-      return this.minionLair[minionName];
+      // send null error and this.minionLair[minionName] with a callback
     } else {
-      return new Error("Invalid Minion Name");
+      // send new error with relevant message back
+      // and null result with a callback
     }
   }
 };

@@ -52,9 +52,11 @@ module.exports = {
   findMealForDay: function(mealPlanProvider, weekDay) {
     sleep.sleep(1);
     if (this.mealPlanSchedule[mealPlanProvider][weekDay]) {
-      return this.mealPlanSchedule[mealPlanProvider][weekDay];
+      // send null error and 
+      // this.mealPlanSchedule[mealPlanProvider][weekDay] with a callback
     } else {
-      return new Error("Meal Plan Provider not Registered");
+      // send new error with relevant message back
+      // and null result with a callback
     }
   }
 };

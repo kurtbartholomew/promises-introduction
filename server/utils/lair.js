@@ -12,9 +12,10 @@ module.exports = {
   findBoss: function(lairName) {
     sleep.sleep(1);
     if (this.lairBoss[lairName]) {
-      return this.lairBoss[lairName];
+      // send null error and this.lairBoss[lairName] with a callback
     } else {
-      return new Error("Lair does not exist");
+      // send new error with relevant message back
+      // and null result with a callback
     }
   }
 };

@@ -12,9 +12,10 @@ module.exports = {
   findBossMealPlan: function(bossName) {
     sleep.sleep(1);
     if (this.bossMealPlan[bossName]) {
-      return this.bossMealPlan[bossName];
+      // send null error and this.bossMealPlan[bossName] with a callback
     } else {
-      return new Error("No Provided Meal Plan");
+      // send new error with relevant message back
+      // and null result with a callback
     }
   }
 };
