@@ -12,6 +12,12 @@ implementation of a Promise library
 
 `npm start` to start up the node server
 
+To have access to all of the solutions for this repo, add a remote for this repo
+
+`git remote add upstream https://github.com/kurtbartholomew/promises-introduction.git`
+
+After that, retrieve the branches by entering `git fetch upstream` and then `git branch -a` to view the available solution branches. Use `git checkout upstream/*insert solution branch name*` to work off a local copy
+
 - - -
 
 ###Callback Creation
