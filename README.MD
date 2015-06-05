@@ -7,6 +7,7 @@ implementation of a Promise library
 ####Initial Steps for the using this repo
 
 `npm install` to install dependencies
+
 `npm install nodemon -g` to globally install [nodemon](https://github.com/remy/nodemon)
 
 `npm start` to start up the node server
@@ -15,8 +16,12 @@ implementation of a Promise library
 
 ###Callback Creation
 
-At this point, you should be prepared to construct the necessary
-callback functions in server/config/middleware.js
+Initially pulling down the repo will give you a starting point to refactor
+the existing function calls in `server/config/middleware.js` as well as the
+existing funtions in `server/utils` to use callbacks.
+
+Use the feedback from your server in your terminal to properly construct your
+callbacks so you return 'broccoli' on the front end.
 
 - - -
 
@@ -25,13 +30,20 @@ callback functions in server/config/middleware.js
 You may proceed to the `callbacks finished` branch to start
 refactoring callbacks using promises.
 
+At this point, you should refactor the same functions and function calls using 
+bluebird's promise creation capabilities
+
 - - -
 
-###Basic Implementation of a Promise
+###(Optional) Refactoring to Promises with Bluebird's PromisifyAll
+
+Use the `callbacks finished` branch and use [promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object) keep your refactor
+to two pages of edits
+<!-- ###Basic Implementation of a Promise
 
 If to implement a basic promise library, checkout the `bluebird refactor finished` branch
 
 Use `npm test` for development style driven by tests
 
 Use `npm run watch-test` to run the tests and have them rerun every time you
-make a change
+make a change -->
