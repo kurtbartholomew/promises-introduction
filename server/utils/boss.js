@@ -9,12 +9,12 @@ module.exports = {
     "Orange Julius Caesar" : "Fruity Fruits"
   },
 
-  findBossMealPlan: function(bossName, callback) {
+  findBossMealPlan: function(bossName) {
     sleep.sleep(1);
     if (this.bossMealPlan[bossName]) {
-      callback(null,this.bossMealPlan[bossName]);
+      return this.bossMealPlan[bossName];
     } else {
-      callback(new Error("No Provided Meal Plan"), null);
+      return new Error("No Provided Meal Plan");
     }
   }
 };

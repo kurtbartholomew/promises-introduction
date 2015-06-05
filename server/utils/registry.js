@@ -16,9 +16,9 @@ module.exports = {
   findMinion: function(minionId, callback) {
     sleep.sleep(1);
     if (this.minionRegistry[minionId]) {
-      callback(null, this.minionRegistry[minionId]);
+      return this.minionRegistry[minionId];
     } else {
-      callback(new Error("Minion is unregistered. They must die!!"),null);
+      return new Error("Minion is unregistered. They must die!!");
     }
   }
 };

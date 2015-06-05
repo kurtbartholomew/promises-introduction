@@ -13,12 +13,12 @@ module.exports = {
     "Steve" : "Evil Dennys" 
   },
 
-  findLair: function(minionName, callback) {
+  findLair: function(minionName) {
     sleep.sleep(1);
     if (this.minionLair[minionName]) {
-      callback(null,this.minionLair[minionName]);
+      return this.minionLair[minionName];
     } else {
-      callback(new Error("Invalid Minion Name"),null);
+      return new Error("Invalid Minion Name");
     }
   }
 };

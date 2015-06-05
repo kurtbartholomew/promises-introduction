@@ -20,20 +20,7 @@ module.exports = function (app,express) {
         var dayOfWeek = req.body.day;
 
         minionRegistry.findMinion(minionID, function(err, minionName){
-              if(err) { return res.status(404).send(err.message) }
-            minion.findLair(minionName, function(err, lairName) {
-                  if(err) { return res.status(404).send(err.message) }
-                lair.findBoss(lairName, function(err, bossName) {
-                    if(err) { return res.status(404).send(err.message) }
-                    boss.findBossMealPlan(bossName, function(err, mealPlan) {
-                        if(err) { return res.status(404).send(err.message) }
-                        lunch.findMealForDay(mealPlan, dayOfWeek, function(err, food){
-                            if(err) { return res.status(404).send(err.message); }
-                            res.send(food);
-                        });
-                    });
-                });
-            });
+            
         });
     });
 };

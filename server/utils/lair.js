@@ -9,12 +9,12 @@ module.exports = {
     "Chicago" : "Orange Julius Caesar",
   },
 
-  findBoss: function(lairName, callback) {
+  findBoss: function(lairName) {
     sleep.sleep(1);
     if (this.lairBoss[lairName]) {
-      callback(null,this.lairBoss[lairName]);
+      return this.lairBoss[lairName];
     } else {
-      callback( new Error("Lair does not exist"), null);
+      return new Error("Lair does not exist");
     }
   }
 };
