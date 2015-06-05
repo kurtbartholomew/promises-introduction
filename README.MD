@@ -16,8 +16,12 @@ implementation of a Promise library
 
 ###Callback Creation
 
-At this point, you should be prepared to construct the necessary
-callback functions in server/config/middleware.js
+Initially pulling down the repo will give you a starting point to refactor
+the existing function calls in `server/config/middleware.js` as well as the
+existing funtions in `server/utils` to use callbacks.
+
+Use the feedback from your server in your terminal to properly construct your
+callbacks so you return 'broccoli' on the front end.
 
 - - -
 
@@ -25,6 +29,9 @@ callback functions in server/config/middleware.js
 
 You may proceed to the `callbacks finished` branch to start
 refactoring callbacks using promises.
+
+At this point, you should refactor the same functions and function calls using 
+bluebird's promise creation capabilities
 
 - - -
 
