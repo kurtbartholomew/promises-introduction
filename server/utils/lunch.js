@@ -1,4 +1,5 @@
 var sleep = require('sleep');
+var Promise = require('bluebird');
 module.exports = {
 
   mealPlanSchedule: {
@@ -49,12 +50,18 @@ module.exports = {
     },
   },
 
-  findMealForDay: function(mealPlanProvider, weekDay, callback) {
+  findMealForDay: function(mealPlanProvider, weekDay) {
     sleep.sleep(1);
-    if (this.mealPlanSchedule[mealPlanProvider][weekDay]) {
-      callback(null,this.mealPlanSchedule[mealPlanProvider][weekDay]);
-    } else {
-      callback( new Error("That's not a day of the week, you fool! Report to the shark tanks!"), null);
-    }
+
+    var that = this;
+
+    return new Promise(function(resolve, reject){
+
+      if (that.mealPlanSchedule[mealPlanProvider][weekDay]) {
+        resolve(that.mealPlanSchedule[mealPlanProvider][weekDay]);
+      } else {
+        reject( new Error("That's not a day of the week, you fool! Report to the shark tanks!"));
+      }
+    });
   }
 };

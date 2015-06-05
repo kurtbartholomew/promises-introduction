@@ -1,4 +1,5 @@
 var sleep = require('sleep');
+var Promise = require('bluebird');
 module.exports = {
 
   minionRegistry: {
@@ -13,12 +14,18 @@ module.exports = {
     9: "Steve" 
   },
 
-  findMinion: function(minionId, callback) {
-    sleep.sleep(1);
-    if (this.minionRegistry[minionId]) {
-      callback(null, this.minionRegistry[minionId]);
-    } else {
-      callback(new Error("You are unregistered. Report to the shark tanks!"),null);
-    }
+  findMinion: function(minionId) {
+      sleep.sleep(1);
+
+    var that = this;
+
+    return new Promise(function(resolve, reject){
+
+      if (that.minionRegistry[minionId]) {
+        resolve(that.minionRegistry[minionId]);
+      } else {
+        reject(new Error("You are unregistered. Report to the shark tanks!"));
+      }
+    });
   }
 };

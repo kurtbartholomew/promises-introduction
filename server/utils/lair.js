@@ -1,4 +1,5 @@
 var sleep = require('sleep');
+var Promise = require('bluebird');
 module.exports = {
 
   lairBoss: {
@@ -9,12 +10,18 @@ module.exports = {
     "Chicago" : "Orange Julius Caesar",
   },
 
-  findBoss: function(lairName, callback) {
+  findBoss: function(lairName) {
     sleep.sleep(1);
-    if (this.lairBoss[lairName]) {
-      callback(null,this.lairBoss[lairName]);
-    } else {
-      callback( new Error("Lair does not exist"), null);
-    }
+
+    var that = this;
+
+    return new Promise(function(resolve, reject){
+
+      if (that.lairBoss[lairName]) {
+        resolve(that.lairBoss[lairName]);
+      } else {
+        reject( new Error("Lair does not exist"));
+      }
+    });
   }
 };

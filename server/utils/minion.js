@@ -1,4 +1,5 @@
 var sleep = require('sleep');
+var Promise = require('bluebird');
 module.exports = {
 
   minionLair: {
@@ -13,12 +14,18 @@ module.exports = {
     "Steve" : "Evil Dennys" 
   },
 
-  findLair: function(minionName, callback) {
+  findLair: function(minionName) {
     sleep.sleep(1);
-    if (this.minionLair[minionName]) {
-      callback(null,this.minionLair[minionName]);
-    } else {
-      callback(new Error("Invalid Minion Name"),null);
-    }
+
+    var that = this;
+
+    return new Promise(function(resolve, reject){
+
+      if (that.minionLair[minionName]) {
+        resolve(that.minionLair[minionName]);
+      } else {
+        reject(new Error("Invalid Minion Name"));
+      }
+    });
   }
 };
