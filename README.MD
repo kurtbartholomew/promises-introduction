@@ -48,6 +48,8 @@ bluebird's promise creation capabilities
 Use the `callbacks finished` branch and use [promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object) keep your refactor
 to two pages of edits
 
+- - -
+
 ###(Solutions Branch) Compare the 3 different implementations all in one place
 
 Checkout the `all-implementations-version` branch to see the callback implementation, Bluebird promise implementation, and Bluebird promisify all implementation. They can be found the `all-implementations folder`
