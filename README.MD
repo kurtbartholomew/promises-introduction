@@ -4,6 +4,8 @@ This is a simple repo constructed for engineers wanting to understand the
 reasons for promises and desiring the understanding to create their own
 implementation of a Promise library
 
+The accompanying Prezi presentation can be found [here](https://prezi.com/3cgxve4bcgoo/demystifying-promises/)
+
 ####Initial Steps for the using this repo
 
 `npm install` to install dependencies
@@ -45,11 +47,7 @@ bluebird's promise creation capabilities
 
 Use the `callbacks finished` branch and use [promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object) keep your refactor
 to two pages of edits
-<!-- ###Basic Implementation of a Promise
 
-If to implement a basic promise library, checkout the `bluebird refactor finished` branch
+###(Solutions Branch) Compare the 3 different implementations all in one place
 
-Use `npm test` for development style driven by tests
-
-Use `npm run watch-test` to run the tests and have them rerun every time you
-make a change -->
+Checkout the `all-implementations-version` branch to see the callback implementation, Bluebird promise implementation, and Bluebird promisify all implementation. They can be found the `all-implementations folder`
